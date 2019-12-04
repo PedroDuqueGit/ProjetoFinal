@@ -43,7 +43,7 @@ class Data extends Conexao {
 	public function update($obj,$id = null){
 		$sql = "UPDATE datas SET dia = :dia, descricao = :descricao,horario = :horario, id = :id ";
 		$consulta = Conexao::prepare($sql);
-		$consulta->bindValue('titulo', $obj->titulo);
+		$consulta->bindValue('dia', $obj->dia);
 		$consulta->bindValue('descricao', $obj->descricao);
 		$consulta->bindValue('horario' , $obj->horario);
 		$consulta->bindValue('id', $id);
