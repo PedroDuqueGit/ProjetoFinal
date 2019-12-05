@@ -1,7 +1,7 @@
 <?php
 header("Access-Control-Allow-Origin: *");
 //define('PASTAPROJETO', 'AulaBanco');
-define('PASTAPROJETO', 'ProjetoFinal');
+define('PASTAPROJETO', 'ProjetoFinal/Backend');
 /* Função criada para retornar o tipo de requisição */
 function checkRequest() {
 	$method = $_SERVER['REQUEST_METHOD'];
@@ -36,15 +36,7 @@ if ($args) {
 	$request = '/'.PASTAPROJETO.'/'.$args[0];
 }
 switch ($request) {
-    case '/'.PASTAPROJETO:
-      require __DIR__ . '/api/api.php';
-        break;
-    case '/'.PASTAPROJETO.'/' :
-        require __DIR__ . '/api/api.php';
-        break;
-    case '/' :
-        require __DIR__ . '/api/api.php';
-        break;
+    
     case '/'.PASTAPROJETO.'/jogos' :
         require __DIR__ . '/api/'.$answer.'_jogo.php';
         break;
